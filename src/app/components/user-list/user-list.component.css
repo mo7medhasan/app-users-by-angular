@@ -1,0 +1,78 @@
+
+.form-inline{
+  margin: auto;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+input{
+  margin: auto;
+  height: 50px;
+  max-width: 350px;width: 100%;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  padding: 10px 25px;
+}
+.paginator{
+  margin: auto;
+  /* height: 50px; */
+  max-width: 350px;width: 100%;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  padding: 10px 25px;
+}
+.users{
+      background-color: black;
+      padding: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.14) ;
+      border-radius: 25px;margin: 50px;
+}
+.user-card {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
+   
+   margin: auto;
+    margin-bottom: 15px;
+    text-decoration: none;
+    color: white;
+    border-bottom: 0.5px solid rgba(0,0,0,0.14);
+
+  }
+  .user-card-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 15px;
+  }
+  
+  .user-card-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .spinner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+  }
+  a{
+    text-decoration: none;
+    color: white;
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      max-width: 600px;
+    }
+  }

@@ -1,0 +1,57 @@
+<div class="form-inline">
+  <input class="form-control mr-sm-2" type="search" placeholder="Search by ID" aria-label="Search" maxlength="2"
+  min="1" max="12"
+    matInput [(ngModel)]="searchQuery" (ngModelChange)="onSearch()" />
+
+
+</div>
+@if (searchResults.length > 0&&searchResults[0].id) {
+  <div class="users">
+  <div *ngFor="let user of searchResults" class="user-card">
+    <a routerLink="/user-details/{{ user.id }}">
+      <div class="user-card">
+        <img [src]="user.avatar" class="user-card-avatar" alt="User Avatar" />
+        <div class="user-card-info">
+          <div class="user-card-name">{{ user.first_name }} {{ user.last_name }}</div>
+          <div class="user-card-id">ID: {{ user.id }}</div>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>}
+@if (searchMess.length) {
+  <div class="users">
+    <div class="user-card">
+      <div class="user-card-name">
+        {{ searchMess}}
+      </div></div>
+  </div>
+}
+
+
+@if (users.length > 0) {
+<div class="users">
+  <div *ngFor="let user of users">
+    <a routerLink="/user-details/{{ user.id }}">
+      <div class="user-card">
+        <img [src]="user.avatar" class="user-card-avatar" alt="User Avatar" />
+        <div class="user-card-info">
+          <div class="user-card-name">{{ user.first_name }} {{ user.last_name }}</div>
+          <div class="user-card-id">ID: {{ user.id }}</div>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
+
+
+}
+<div class="paginator">
+<mat-paginator showFirstLastButtons [pageSize]="1" [length]="6" (page)="onPageChange($event)">
+</mat-paginator></div>
+
+
+
+@if (searchResults.length === 0 && users.length === 0) {
+  <div class="spinner-container"> <mat-spinner></mat-spinner>
+  </div>}
